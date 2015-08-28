@@ -1,0 +1,5 @@
+D:\project\Push28\BaiduPush\BaseHelper\bin\Debug\BaseHelper.dll
+D:\project\Push28\BaiduPush\BaseHelper\bin\Debug\BaseHelper.pdb
+D:\project\Push28\BaiduPush\BaseHelper\obj\Debug\BaseHelper.dll
+D:\project\Push28\BaiduPush\BaseHelper\obj\Debug\BaseHelper.pdb
+D:\project\Push28\BaiduPush\BaseHelper\obj\Debug\BaseHelper.csprojResolveAssemblyReference.cache

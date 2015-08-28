@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiduPush", "BaiduPush\BaiduPush.csproj", "{355CD5CD-71C3-4745-9FAC-649ADAAF0104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComBCL", "ComBCL\ComBCL.csproj", "{E8C75FBB-F251-43C2-8888-C3574DB8CAB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseHelper", "BaseHelper\BaseHelper.csproj", "{9CC33537-377C-48E7-823F-27F95CB7AC9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{355CD5CD-71C3-4745-9FAC-649ADAAF0104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{355CD5CD-71C3-4745-9FAC-649ADAAF0104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{355CD5CD-71C3-4745-9FAC-649ADAAF0104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{355CD5CD-71C3-4745-9FAC-649ADAAF0104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8C75FBB-F251-43C2-8888-C3574DB8CAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C75FBB-F251-43C2-8888-C3574DB8CAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C75FBB-F251-43C2-8888-C3574DB8CAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C75FBB-F251-43C2-8888-C3574DB8CAB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC33537-377C-48E7-823F-27F95CB7AC9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC33537-377C-48E7-823F-27F95CB7AC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC33537-377C-48E7-823F-27F95CB7AC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC33537-377C-48E7-823F-27F95CB7AC9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

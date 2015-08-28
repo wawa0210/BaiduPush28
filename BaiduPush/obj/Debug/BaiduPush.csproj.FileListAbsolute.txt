@@ -1,0 +1,11 @@
+D:\project\Push28\BaiduPush\BaiduPush\bin\BaiduPush.dll.config
+D:\project\Push28\BaiduPush\BaiduPush\bin\BaiduPush.dll
+D:\project\Push28\BaiduPush\BaiduPush\bin\BaiduPush.pdb
+D:\project\Push28\BaiduPush\BaiduPush\obj\Debug\BaiduPush.csprojResolveAssemblyReference.cache
+D:\project\Push28\BaiduPush\BaiduPush\obj\Debug\BaiduPush.dll
+D:\project\Push28\BaiduPush\BaiduPush\obj\Debug\BaiduPush.pdb
+D:\project\Push28\BaiduPush\BaiduPush\bin\BaseHelper.dll
+D:\project\Push28\BaiduPush\BaiduPush\bin\ComBCL.dll
+D:\project\Push28\BaiduPush\BaiduPush\bin\BaseHelper.pdb
+D:\project\Push28\BaiduPush\BaiduPush\bin\ComBCL.pdb
+D:\project\Push28\BaiduPush\BaiduPush\bin\Newtonsoft.Json.dll
