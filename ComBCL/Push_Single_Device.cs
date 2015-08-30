@@ -20,6 +20,7 @@ namespace ComBCL.BdPush
         {
             this.httpMehtod = Baidu_Helper.HTTP_POST;
             this.url = "http://api.tuisong.baidu.com/rest/3.0/" + Baidu_Helper.PUSH_SIGNLE_DEVICE;
+            //this.url = "http://channel.api.duapp.com/rest/2.0/channel/channel" + Baidu_Helper.PUSH_SIGNLE_DEVICE;
             this.secret_key = secret_key;
             this.mod = mod;
         }
@@ -35,21 +36,29 @@ namespace ComBCL.BdPush
         #region 重写PushMessage方法
         public override string PushMessage()
         {
+            //string strResult = "";
+
+            ////1.创建异步任务
+            //Task<string> task = Baidu_Helper.SendBaidu(this.httpMehtod, this.url, this.secret_key, this.mod);
+
+            ////2.等待任务完成
+            //task.Wait();
+
+            ////3.异步任务完成
+            //if (task.IsCompleted)
+            //{
+            //    strResult = task.Result.ToString();
+            //}
+
+            //return strResult;
+
+
+
             string strResult = "";
-
-            //1.创建异步任务
-            Task<string> task = Baidu_Helper.SendBaidu(this.httpMehtod, this.url, this.secret_key, this.mod);
-
-            //2.等待任务完成
-            task.Wait();
-
-            //3.异步任务完成
-            if (task.IsCompleted)
-            {
-                strResult = task.Result.ToString();
-            }
+            strResult = Baidu_Helper.SendBaiduTest(this.httpMehtod, this.url, this.secret_key, this.mod);
 
             return strResult;
+
         }
         #endregion
 

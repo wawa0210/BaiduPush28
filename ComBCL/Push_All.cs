@@ -12,9 +12,9 @@ namespace ComBCL.BdPush
     /// 日期：20150-04-29
     /// 功能：向当前app下所有设备推送一条消息
     /// </summary>
-    public class Push_All:Baidu_Send
+    public class Push_All : Baidu_Send
     {
-        
+
         #region 构造函数
         public Push_All(string secret_key, Baidu_Mod mod)
         {
@@ -35,19 +35,25 @@ namespace ComBCL.BdPush
         #region 重写PushMessage方法
         public override string PushMessage()
         {
+            //string strResult = "";
+
+            ////1.创建异步任务
+            //Task<string> task = Baidu_Helper.SendBaidu(this.httpMehtod, this.url, this.secret_key, this.mod);
+
+            ////2.等待任务完成
+            //// task.Wait();
+
+            ////3.异步任务完成
+            //if (task.IsCompleted)
+            //{
+            //    strResult = task.Result + "|" + task.Status;
+            //}
+
+            //return strResult;
+
+
             string strResult = "";
-
-            //1.创建异步任务
-            Task<string> task = Baidu_Helper.SendBaidu(this.httpMehtod, this.url, this.secret_key, this.mod);
-
-            //2.等待任务完成
-           // task.Wait();
-
-            //3.异步任务完成
-            if (task.IsCompleted)
-            {
-                strResult = task.Result.ToString();
-            }
+            strResult = Baidu_Helper.SendBaiduTest(this.httpMehtod, this.url, this.secret_key, this.mod);
 
             return strResult;
         }

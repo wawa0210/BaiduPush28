@@ -23,28 +23,28 @@ namespace ComBCL.BdPush
         #endregion
 
         #region 构造函数
-        public Push_Single_Device_Mod(string apikey, string channel_id, string msg)
+        public Push_Single_Device_Mod(string apikey, string channel_id, string msg, uint msgExpires)
         {
             this.apikey = apikey;
             this.channel_id = channel_id;
             this.msg = msg;
             this.timestamp = Tool.getDefauleTimestamp();   //默认使用当前时间戳
             this.msg_type = 0;              //消息
-            this.msg_expires = 604800;      //7天过期
+            this.msg_expires = msgExpires;      //过期时间（单位为妙）
             this.device_type = 3;           //安卓
             this.deploy_status = 2;         //生产状态
         }
 
-        public Push_Single_Device_Mod(string apikey, string channel_id, string msg, uint msg_type)
+        public Push_Single_Device_Mod(string apikey, string channel_id, string msg, uint msg_type, uint msgExpires)
         {
             this.apikey = apikey;
             this.channel_id = channel_id;
             this.msg = msg;
-            this.timestamp = Tool.getDefauleTimestamp();   //默认使用当前时间戳
+            //this.timestamp = Tool.getDefauleTimestamp();   //默认使用当前时间戳
             this.msg_type = msg_type;       //消息类型
-            this.msg_expires = 604800;      //7天过期
-            this.device_type = 3;           //安卓
-            this.deploy_status = 2;         //生产状态
+            this.msg_expires = msgExpires;      //过期时间（单位为妙）
+            //this.device_type = 3;           //安卓
+           // this.deploy_status = 2;         //生产状态
         }
         #endregion
 

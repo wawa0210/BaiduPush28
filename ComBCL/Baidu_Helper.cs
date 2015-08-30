@@ -164,6 +164,7 @@ namespace ComBCL.BdPush
         #endregion
 
         #region 发送消息到百度
+
         public static async Task<string> SendBaidu(string httpMethod, string url, string secretKey, Baidu_Mod mod)
         {
             //获取签名
@@ -194,24 +195,85 @@ namespace ComBCL.BdPush
                     await contents.LoadIntoBufferAsync();
                     try
                     {
-                        //response = await client.PostAsync(url, contents);
-
                         response = await client.PostAsync(url, contents);
-
 
                         //返回值
                         responseContent = await response.Content.ReadAsStringAsync();
                     }
-                    catch (Exception e)
+                    catch (WebException ex)
                     {
-
+                        Stream stream = ex.Response.GetResponseStream();
+                        string m = ex.Response.Headers.ToString();
+                        byte[] buf = new byte[256];
+                        stream.Read(buf, 0, 256);
+                        stream.Close();
+                        int count = 0;
+                        foreach (var b in buf)
+                        {
+                            if (b > 0)
+                            {
+                                count++;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        responseContent = "Post:" + url + ex.Message + "\r\n\r\n" + Encoding.UTF8.GetString(buf, 0, count);
                     }
                 }
 
 
 
-            }// http完结
+            }
 
+            return responseContent;
+
+        }
+
+        public static String SendBaiduTest(string httpMethod, string url, string secretKey, Baidu_Mod mod)
+        {
+            //获取签名
+            string strSign = CreateSign(httpMethod, url, secretKey, mod);
+
+            string responseContent = "";                //返回字符串
+
+            using (var webClient = new WebClient())
+            {
+                try
+                {
+                    webClient.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+
+
+                    byte[] data = Encoding.UTF8.GetBytes(GetParamerCollection(mod, strSign).ToString());//编码，尤其是汉字，事先要看下抓取网页的编码方式  
+
+                    byte[] responseData = webClient.UploadData(url, "POST", data);//得到返回字符流  
+
+                    responseContent = Encoding.UTF8.GetString(responseData);//解码  
+
+                }
+                catch (WebException ex)
+                {
+                    Stream stream = ex.Response.GetResponseStream();
+                    string m = ex.Response.Headers.ToString();
+                    byte[] buf = new byte[256];
+                    stream.Read(buf, 0, 256);
+                    stream.Close();
+                    int count = 0;
+                    foreach (var b in buf)
+                    {
+                        if (b > 0)
+                        {
+                            count++;
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    responseContent = "Post:" + url + ex.Message + "\r\n\r\n" + Encoding.UTF8.GetString(buf, 0, count);
+                }
+            }
             return responseContent;
 
         }
