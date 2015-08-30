@@ -40,10 +40,10 @@ namespace ComBCL.BdPush
             this.apikey = apikey;
             this.channel_id = channel_id;
             this.msg = msg;
-            //this.timestamp = Tool.getDefauleTimestamp();   //默认使用当前时间戳
+            this.timestamp = Tool.getDefauleTimestamp();   //默认使用当前时间戳
             this.msg_type = msg_type;       //消息类型
             this.msg_expires = msgExpires;      //过期时间（单位为妙）
-            //this.device_type = 3;           //安卓
+            this.device_type = 3;           //安卓
            // this.deploy_status = 2;         //生产状态
         }
         #endregion

@@ -25,7 +25,7 @@ namespace BaiduPush.SendMessage
 
             Notice_Android_Mod dam = new Notice_Android_Mod(txtTitle.Value, txtContent.Value);
             string json = JsonConvert.SerializeObject(dam);
-            Push_Single_Device_Mod psdm = new Push_Single_Device_Mod(apikKey, channel_id, json, (int)Baidu_Helper.Message_Type.Notice,1);
+            Push_Single_Device_Mod psdm = new Push_Single_Device_Mod(apikKey, channel_id, json, (int)Baidu_Helper.Message_Type.Notice, 1);
 
             Push_Single_Device psd = new Push_Single_Device(secretKey, psdm);
             txtResponse.Value = psd.PushMessage();

@@ -20,3 +20,14 @@ D:\project\Push28\BaiduPush28\BaiduPush\bin\ComBCL.pdb
 D:\project\Push28\BaiduPush28\BaiduPush\obj\Debug\BaiduPush.csprojResolveAssemblyReference.cache
 D:\project\Push28\BaiduPush28\BaiduPush\obj\Debug\BaiduPush.dll
 D:\project\Push28\BaiduPush28\BaiduPush\obj\Debug\BaiduPush.pdb
+D:\project\BaiduPush28\BaiduPush\bin\BaiduPush.dll.config
+D:\project\BaiduPush28\BaiduPush\bin\BaiduPush.dll
+D:\project\BaiduPush28\BaiduPush\bin\BaiduPush.pdb
+D:\project\BaiduPush28\BaiduPush\bin\BaseHelper.dll
+D:\project\BaiduPush28\BaiduPush\bin\ComBCL.dll
+D:\project\BaiduPush28\BaiduPush\bin\Newtonsoft.Json.dll
+D:\project\BaiduPush28\BaiduPush\bin\BaseHelper.pdb
+D:\project\BaiduPush28\BaiduPush\bin\ComBCL.pdb
+D:\project\BaiduPush28\BaiduPush\obj\Debug\BaiduPush.csprojResolveAssemblyReference.cache
+D:\project\BaiduPush28\BaiduPush\obj\Debug\BaiduPush.dll
+D:\project\BaiduPush28\BaiduPush\obj\Debug\BaiduPush.pdb
